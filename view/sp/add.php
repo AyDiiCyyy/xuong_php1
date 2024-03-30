@@ -21,7 +21,7 @@
             <select class="form-select" aria-label="Default select example" name="maloai" id="maloai">
                 <option value="" selected>Chọn loại sách</option>
                 <?php foreach($dm as $value) : ?>
-                <option value="<?=$value['id']?>" <?=($_POST['maloai']==$value['id'])?"selected":""?>><?=$value['tenloai']?></option>
+                <option value="<?=$value['id']?>" <?=(($_POST['maloai']??"")==$value['id'])?"selected":""?>><?=$value['tenloai']?></option>
                 <?php endforeach ?>
             </select>
             <span class="text-danger"><?=$er['maloai']??''?></span>
